@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - VoiceCloneAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #222;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 400px;
+      width: 90%;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    input, select {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      padding: 10px;
+      background: #00bfa5;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    h2 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <form id="registerForm">
+    <h2>Register</h2>
+    <input type="text" name="name" placeholder="Enter your name" required />
+    <input type="tel" name="phone" placeholder="Enter your phone number" required />
+    <select name="gender" required>
+      <option value="" disabled selected>Select your gender</option>
+      <option value="Female">Female</option>
+      <option value="Male">Male</option>
+      <option value="Other">Other</option>
+    </select>
+    <input type="text" name="state" placeholder="Enter your state" required />
+    <input type="email" name="email" placeholder="Enter your Gmail" required />
+    <input type="password" name="password" placeholder="Enter your password" required />
+    <button type="submit">Register</button>
+  </form>
+
+  <script>
+    const registerForm = document.getElementById("registerForm");
+    registerForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+      
+      const name = this.name.value.trim();
+      const phone = this.phone.value.trim();
+      const gender = this.gender.value;
+      const state = this.state.value.trim();
+      const email = this.email.value.trim();
+      const password = this.password.value;
+      
+      // Check if email is a valid Gmail address
+      if (!email.endsWith("@gmail.com")) {
+        alert("Please use a valid Gmail address for registration.");
+        return;
+      }
+      
+      // Save registration details to localStorage
+      const registrationData = { name, phone, gender, state, email, password };
+      localStorage.setItem("registrationData", JSON.stringify(registrationData));
+      
+      alert(`Registration successful for ${name} with email: ${email}`);
+      
+      // Redirect to login page after registration
+      window.location.href = "login.html";
+    });
+  </script>
+</body>
+</html>

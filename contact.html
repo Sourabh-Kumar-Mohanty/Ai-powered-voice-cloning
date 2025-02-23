@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - VoiceCloneAI</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: url('https://media.giphy.com/media/xTkcEQACH24SMPxIQg/giphy.gif') no-repeat center center fixed;
+      background-size: cover;
+      text-align: center;
+      color: white;
+      padding: 50px;
+      margin: 0;
+      backdrop-filter: blur(5px);
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    }
+    h1 {
+      font-size: 32px;
+      text-shadow: 0 0 10px cyan;
+    }
+    p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    /* Social Media Boxes */
+    .social-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      gap: 20px;
+    }
+    .social-box {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.3);
+    }
+    .social-box h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      text-shadow: 0 0 8px cyan;
+    }
+    .social-icons, .dev-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    .social-icons a, .dev-icons a {
+      display: inline-block;
+    }
+    .social-icons img, .dev-icons img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s;
+    }
+    .social-icons img:hover, .dev-icons img:hover {
+      transform: scale(1.1);
+    }
+    a {
+      color: cyan;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      .social-container {
+        flex-direction: column;
+      }
+      .social-box {
+        width: 100%;
+      }
+    }
+
+    /* Contact Form Styles */
+    .contact-form {
+      max-width: 500px;
+      margin: 30px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #ddd;
+    }
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .contact-form button {
+      padding: 12px 15px;
+      border: none;
+      border-radius: 5px;
+      background: #00bfa5;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .contact-form button:hover {
+      background: #009688;
+    }
+    /* Animation for button click */
+    .contact-form button:active {
+      animation: buttonClick 0.3s ease;
+    }
+    @keyframes buttonClick {
+      0% { transform: scale(1); }
+      50% { transform: scale(0.95); }
+      100% { transform: scale(1); }
+    }
+
+    /* Footer Styles */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(34, 34, 34, 0.8);
+      margin-top: 40px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>📧 <strong>Email:</strong> <a href="mailto:swarayoga@voicecloneai.com">swarayoga@voicecloneai.com</a></p>
+    <p>📞 <strong>Phone:</strong> +91 9827649202</p>
+    <p>📍 <strong>Address:</strong> Jatani, Khordha</p>
+
+    <!-- Social Media Boxes -->
+    <div class="social-container">
+      <!-- Follow Us Box -->
+      <div class="social-box">
+        <h2>Follow Us</h2>
+        <div class="social-icons">
+          <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram">
+          </a>
+          <a href="https://facebook.com/YOUR_FACEBOOK" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+          </a>
+          <a href="https://twitter.com/YOUR_TWITTER" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">
+          </a>
+        </div>
+      </div>
+      <!-- Connect with Me Box -->
+      <div class="social-box">
+        <h2>Connect with Me</h2>
+        <div class="dev-icons">
+          <a href="https://github.com/YOUR_GITHUB" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+          </a>
+          <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt="LinkedIn">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 VoiceCloneAI. All rights reserved.</p>
+    <p><a href="swarayoga@voicecloneai.com" style="color: #00bfa5; text-decoration: none;">swarayoga@voicecloneai.com</a></p>
+  </footer>
+</body>
+</html>

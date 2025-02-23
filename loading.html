@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wavvy Video Inside GIF</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 500px; /* Adjust according to the GIF size */
+            height: 500px;
+        }
+
+        .gif-background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('yy3.gif') no-repeat center center;
+            background-size: cover;
+            z-index: 1;
+        }
+
+        .video-overlay {
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            top: 10%;
+            left: 10%;
+            z-index: 2;
+            mix-blend-mode: screen; /* Creates a futuristic blend effect */
+            filter: brightness(1.2) contrast(1.2);
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%; /* If you want a circular effect */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="gif-background"></div>
+        <div class="video-overlay">
+            <video autoplay loop muted>
+                <source src="wavvy.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+</body>
+</html>
